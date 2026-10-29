@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Pamiętam — ważne relacje",
+  "short_name": "Pamiętam",
+  "description": "Prywatny organizer kontaktów z bliskimi",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f5ef",
+  "theme_color": "#f8f5ef",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
