@@ -161,7 +161,7 @@
     <div class="people-list">${urgent.length?urgent.map(p=>personCard(p)).join(''):db.people.length?emptyBlock('Wszystko aktualne!','Na dziś nie masz zaległych kontaktów. Miło to widzieć.',null):emptyBlock('Zacznij od najważniejszych osób','Dodaj pierwszą osobę, ustal częstotliwość kontaktu i pozwól aplikacji pilnować kolejnych dat.')}</div>
     ${upcoming.length?`<div class="section-title-row"><h2 class="section-title">W najbliższych dniach</h2><span class="section-hint">Kolejne 7 dni</span></div><div class="people-list">${upcoming.slice(0,5).map(p=>personCard(p,{noDone:true})).join('')}</div>`:''}
     ${birthdays.length?`<div class="section-title-row"><h2 class="section-title">Zbliżające się urodziny 🎂</h2><button class="btn-text" data-nav="calendar">Wszystkie daty</button></div><div class="soon-list">${birthdays.slice(0,3).map(b=>birthdayRow(b.p,b.date)).join('')}</div>`:''}
-    <div class="tips-row"><article class="tip-box"><h3>✦ Mały gest, wielka różnica</h3><p>Nie potrzebujesz specjalnej okazji. Czasem wystarczy krótkie „Co u Ciebie?” — i kilka minut prawdziwej rozmowy.</p></article><article class="tip-box alternate"><h3>⌁ Twoje dane są Twoje</h3><p>Nie wysyłamy kontaktów do żadnej chmury. Pamiętaj tylko o utworzeniu kopii zapasowej w Ustawieniach.</p></article></div>`;
+    <div class="tips-row"><article class="tip-box" data-thought-card><h3>✦ Mały gest, wielka różnica</h3><p>Ważne relacje warto pielęgnować.</p></article><article class="tip-box alternate"><h3>⌁ Twoje dane są Twoje</h3><p>Nie wysyłamy kontaktów do żadnej chmury. Pamiętaj tylko o utworzeniu kopii zapasowej w Ustawieniach.</p></article></div>`;
   }
   function peopleView(){
     const filtered=sortedPeople().filter(p=>(currentFilter==='all'||p.relation===currentFilter)&&[p.name,p.relation,p.phone,p.note].join(' ').toLocaleLowerCase('pl').includes(searchText.toLocaleLowerCase('pl')));
@@ -281,5 +281,6 @@
 
 </script>
 <script src="./theme.js"></script>
+<script src="./thoughts.js"></script>
 </body>
 </html>
