@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f5ef" />
+  <meta name="description" content="Pamiętam — dbaj o kontakt z ważnymi osobami. Prywatny organizer relacji i przypomnień." />
+  <meta name="color-scheme" content="light" />
+  
+  
+  
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml"><meta name="theme-color" content="#f8f5ef"><title>Pamiętam · Blisko ważnych osób</title>
+  <style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#26252a;background:#f8f5ef;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;--surface:#fff;--bg:#f8f5ef;--ink:#26252a;--muted:#86848d;--line:#eeebea;--accent:#b65361;--accent-soft:#fcebef;--accent-dark:#913e4b;--green:#3b8a6a;--green-soft:#e9f5ec;--shadow:0 10px 34px rgba(49,37,39,.035)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}a{color:inherit}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #de9eaa;outline-offset:2px}.hidden{display:none!important}.layout{display:grid;grid-template-columns:252px minmax(0,1fr);max-width:1480px;min-height:100vh;margin:auto}.sidebar{border-right:1px solid #ebe7e2;padding:36px 20px 24px 27px;display:flex;flex-direction:column;gap:22px;background:#fbf9f5}.brand{display:flex;gap:12px;align-items:center;padding:0 5px 36px}.brand-icon,.mobile-brand-icon{height:43px;width:43px;border-radius:15px;display:flex;align-items:center;justify-content:center;background:#f6dce0;color:#a74958;font-size:25px}.brand strong,.mobile-brand strong{font-size:24px;letter-spacing:-1.3px}.brand-dot{color:#b75b67}.brand small{display:block;font-size:10px;color:#9b9091;letter-spacing:.15px;margin-top:2px}.sidebar-label{color:#b0a8a3;font-size:10px;font-weight:750;letter-spacing:1.6px;padding-left:18px}.desktop-nav{display:grid;gap:6px}.nav-link{border:0;background:none;display:flex;align-items:center;gap:13px;padding:13px 17px;border-radius:12px;color:#777078;font-size:13px;font-weight:640;text-align:left}.nav-link.selected{background:#f5e3e6;color:#a44553}.nav-link:hover:not(.selected){background:#f4f0ea}.nav-icon{font-size:22px;width:24px;line-height:1;text-align:center}.nav-count{margin-left:auto;color:#fff;font-size:11px;background:var(--accent);border-radius:40px;padding:2px 8px}.side-note{margin-top:auto;background:#f5ebe5;border-radius:17px;padding:19px 19px 22px;position:relative;overflow:hidden}.side-note-icon{font-size:25px;color:#d19e89;display:block;margin-bottom:12px}.side-note strong{font-size:13px;color:#79524b}.side-note p{font-size:11px;line-height:1.7;color:#9d8278;margin-bottom:0}.sidebar-foot{font-size:10px;color:#aaa29e;text-align:center;padding-top:7px}.sidebar-foot span{color:var(--green)}.main-shell{min-width:0;display:flex;flex-direction:column}.topbar{height:85px;display:flex;align-items:center;justify-content:flex-end;border-bottom:1px solid var(--line);padding:0 50px;gap:18px}.mobile-brand{display:none}.privacy-pill{color:#918b8c;background:#fff;border:1px solid var(--line);border-radius:100px;padding:9px 15px;font-size:11px}.privacy-pip{display:inline-block;width:7px;height:7px;border-radius:50%;background:#6faa8a;margin-right:5px}.btn{border:0;border-radius:11px;padding:12px 17px;font-weight:680;font-size:12px;display:inline-flex;justify-content:center;align-items:center;gap:7px;white-space:nowrap}.btn-primary{color:#fff;background:#b65361;box-shadow:0 4px 12px rgba(182,83,97,.16)}.btn-primary:hover{background:#a34956}.btn-secondary{background:#fff;color:#4f454a;border:1px solid #e6e1df}.btn-secondary:hover{background:#fbf7f6}.btn-ghost{color:#9c5059;background:#f8ebed}.btn-danger{background:#fff0f0;color:#ac3744}.btn-small{padding:9px 11px;font-size:11px}.btn-icon{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#786f75}.btn-text{background:none;border:0;color:#a74f5c;font-weight:650;font-size:12px;padding:8px}.footer-note{padding:30px;text-align:center;font-size:11px;color:#c4b7b1;margin-top:auto}#app-main{width:min(100%,1060px);padding:48px 50px 10px;margin:auto;flex:1}.eyebrow{color:#b65361;text-transform:uppercase;letter-spacing:2px;font-size:10px;font-weight:800;margin:0 0 11px}.title{font-weight:775;letter-spacing:-1.7px;line-height:1.12;font-size:35px;margin:0}.subtitle{font-size:13px;color:#8b8487;line-height:1.65;margin:12px 0 0}.header-row{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:30px}.header-actions{display:flex;gap:8px;align-items:center}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}.summary-card{background:#fff;border:1px solid #f0ecea;border-radius:18px;padding:20px 23px 17px;box-shadow:var(--shadow)}.summary-card .stat-title{font-size:11px;color:#91878a;display:flex;justify-content:space-between;align-items:center}.stat-icon{font-size:18px;color:#c18890}.stat-number{font-size:29px;font-weight:750;letter-spacing:-1.5px;margin:8px 0 5px}.stat-desc{font-size:10px;color:#aaa2a3}.stat-number.accent{color:#b65361}.stat-number.green{color:#438c6d}.section-title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:30px 0 14px}.section-title{font-size:17px;letter-spacing:-.5px;margin:0;font-weight:740}.section-tag{font-size:10px;background:#f8e6e9;color:#a24c58;padding:5px 10px;border-radius:30px;font-weight:700}.section-hint{font-size:11px;color:#a39b9c}.people-list{display:grid;gap:10px}.person-card{border-radius:16px;background:white;border:1px solid #f0eceb;padding:16px 18px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow)}.person-avatar{width:49px;height:49px;border-radius:15px;background:#f6e6e7;color:#ab5564;display:grid;place-items:center;font-weight:780;font-size:17px;flex-shrink:0}.person-avatar.alt1{background:#ecebf7;color:#6c67a6}.person-avatar.alt2{background:#e6f1e9;color:#64947c}.person-avatar.alt3{background:#f9eddd;color:#a97c44}.person-info{min-width:0;flex:1}.person-name{font-size:13px;font-weight:750;margin:0 0 5px}.person-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px;color:#aaa1a5}.dot{width:3px;height:3px;background:#c6c1c1;border-radius:50%;display:inline-block}.status-pill{background:#f8edee;color:#ac5863;font-size:10px;font-weight:700;padding:6px 9px;border-radius:30px;white-space:nowrap}.status-pill.good{background:#eaf5ee;color:#49866c}.status-pill.neutral{background:#f3f0ed;color:#81797d}.person-actions{display:flex;align-items:center;gap:7px;margin-left:5px}.action-round{border:0;background:#f4f4f1;border-radius:11px;height:37px;width:37px;display:grid;place-items:center;color:#736b73;font-size:18px}.action-round.primary{background:#f7e9eb;color:#b65361}.action-round:hover{filter:brightness(.96)}.empty{background:#fff;border:1px dashed #e3d8d7;border-radius:20px;min-height:245px;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;padding:30px;gap:10px}.empty-emoji{height:55px;width:55px;background:#f9e9ec;color:#b65361;border-radius:18px;display:grid;place-items:center;font-size:28px}.empty h3{font-size:17px;margin:4px 0 0}.empty p{max-width:340px;color:#9b9294;line-height:1.6;font-size:12px;margin:0 0 9px}.tips-row{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:28px}.tip-box{border:1px solid #f0e6e1;border-radius:16px;padding:20px;background:#f4ebe6}.tip-box.alternate{background:#f5f3f0}.tip-box h3{font-size:13px;color:#765b55;margin:0 0 7px}.tip-box p{font-size:11px;line-height:1.7;color:#99847d;margin:0}.tip-box.alternate h3{color:#6d6767}.tip-box.alternate p{color:#9a9291}.tool-row{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 19px}.search-wrap{flex:1;min-width:185px;position:relative}.search-wrap input{width:100%;padding:13px 14px 13px 38px;border:1px solid #ebe5e4;border-radius:12px;background:#fff;font-size:12px;color:var(--ink)}.search-wrap::before{content:'⌕';font-size:25px;position:absolute;left:12px;top:5px;color:#ad9fa3}.select{padding:12px 13px;border:1px solid #ebe5e4;border-radius:12px;background:#fff;font-size:12px;color:#6b6065}.soon-list{display:grid;gap:10px}.birthday-row{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;align-items:center;gap:15px}.birthday-date{background:#f9e7eb;color:#ab5160;border-radius:11px;padding:10px;width:59px;text-align:center;font-weight:800;font-size:18px;line-height:1.1}.birthday-date small{display:block;font-weight:650;font-size:9px;letter-spacing:1px;margin-top:4px}.birthday-name{flex:1;font-weight:680;font-size:13px}.birthday-caption{display:block;color:#a39a9b;font-size:11px;font-weight:400;margin-top:3px}.settings-stack{display:grid;gap:14px}.settings-card{padding:22px;border-radius:17px;background:white;border:1px solid var(--line)}.settings-card h3{font-size:14px;margin:0 0 7px}.settings-card p{font-size:12px;color:#918a8e;line-height:1.7;margin:0 0 15px}.settings-card .settings-buttons{display:flex;gap:9px;flex-wrap:wrap}.settings-card.attention{background:#fef7f7}.notice{background:#fdf2df;border:1px solid #f4e5c7;color:#97713c;padding:12px 15px;border-radius:11px;font-size:11px;line-height:1.6}.overlay{position:fixed;inset:0;background:rgba(40,31,37,.5);z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(5px)}.dialog{width:min(100%,535px);max-height:min(92dvh,790px);background:#fff;border-radius:22px;box-shadow:0 25px 75px #31242e40;overflow:auto;padding:27px}.dialog-header{display:flex;align-items:start;justify-content:space-between;gap:10px;margin-bottom:22px}.dialog-header h2{font-size:22px;letter-spacing:-.7px;margin:4px 0}.dialog-header p{font-size:12px;line-height:1.6;color:#958c91;margin:6px 0 0}.close{background:#f6f3f2;border:0;color:#766e71;border-radius:11px;width:33px;height:33px;font-size:21px;flex-shrink:0}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:7px;margin-bottom:14px;min-width:0}.field label{font-size:11px;font-weight:730;color:#635b5f}.field input,.field select,.field textarea{border:1px solid #e8e4e3;background:#fff;border-radius:11px;padding:12px 13px;font-size:13px;color:#453a40;width:100%;min-width:0}.field textarea{min-height:76px;resize:vertical}.field small{color:#aaa1a5;font-size:10px;line-height:1.5}.field label .optional{font-weight:400;color:#a89fa3}.dialog-actions{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:17px}.dialog-actions .right{display:flex;gap:8px;align-items:center}.quick-links{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 21px}.divider-text{display:flex;align-items:center;gap:9px;color:#aaa1a3;text-align:center;font-size:10px;margin:20px 0}.divider-text:before,.divider-text:after{content:'';height:1px;background:#ede8e6;flex:1}.mini-row{display:flex;justify-content:space-between;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid #f3eeee}.mini-row:last-child{border:0}.mini-row strong{font-size:12px}.mini-row small{display:block;color:#aaa2a3;margin-top:3px;font-size:10px}.checkbox{accent-color:#ad5563;width:17px;height:17px}.import-summary{font-size:12px;color:#867a7d;line-height:1.65}.import-list{max-height:260px;overflow:auto;margin:12px 0;padding:0 13px;border:1px solid var(--line);border-radius:13px}.hint{font-size:11px;color:#999095;line-height:1.6}.toast{position:fixed;bottom:28px;right:25px;padding:13px 18px;border-radius:13px;background:#2e3232;color:#fff;box-shadow:0 10px 28px #0002;z-index:300;display:flex;align-items:center;gap:12px;font-size:12px;max-width:min(420px,calc(100vw - 30px))}.toast button{border:0;background:transparent;color:#f1b9c1;font-weight:750;padding:4px}.bottom-nav{display:none}.contact-banner{background:#f6eeee;border:1px solid #f1e1e2;border-radius:14px;padding:12px;font-size:11px;color:#8a666c;line-height:1.65;margin-bottom:17px}.call-row{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.call-row a{text-decoration:none}.history-list{padding-left:19px;margin:0;line-height:2.1;color:#82787d;font-size:12px}.section-empty{text-align:center;font-size:12px;color:#a39b9d;padding:25px;background:#fff;border-radius:15px;border:1px dashed var(--line)}.app-version{font-size:10px;color:#ad9d9e}.person-more{color:#b65361}.supported{background:#eaf5ee;color:#4b866a;border-radius:10px;padding:12px 14px;font-size:11px}
+@media(min-width:1200px){#app-main{padding-left:65px;padding-right:65px}.topbar{padding-right:65px}}
+@media(max-width:920px){.layout{grid-template-columns:205px minmax(0,1fr)}.sidebar{padding:30px 12px}.brand{padding:0 5px 25px}.topbar{padding:0 27px}#app-main{padding:37px 27px}.person-card{gap:11px;padding:14px}.person-actions{gap:5px}.status-pill{padding:6px 7px}}
+@media(max-width:730px){.layout{display:block}.sidebar{display:none}.topbar{height:66px;padding:0 21px;justify-content:space-between}.mobile-brand{display:flex;align-items:center;gap:9px}.mobile-brand-icon{height:34px;width:34px;border-radius:11px;font-size:19px}.mobile-brand strong{font-size:22px}.privacy-pill{font-size:10px;padding:7px 10px}.btn-top{display:none}#app-main{padding:32px 17px 80px}.header-row{align-items:start;margin-bottom:24px}.title{font-size:30px}.summary-grid{gap:9px}.summary-card{padding:15px 12px}.stat-number{font-size:24px}.stat-desc{font-size:9px}.stat-title{font-size:10px}.person-card{padding:13px 12px;gap:9px}.person-avatar{height:42px;width:42px;border-radius:12px;font-size:14px}.person-name{font-size:12px}.person-meta{font-size:10px}.person-actions{gap:5px}.action-round{height:32px;width:32px;font-size:16px}.status-pill{font-size:9px}.tips-row{grid-template-columns:1fr}.bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;justify-content:space-around;align-items:center;background:#fff;border-top:1px solid #f0e9e7;z-index:50;padding:9px 6px max(9px,env(safe-area-inset-bottom));box-shadow:0 -7px 25px #1d101108}.bottom-link{border:0;background:none;color:#9d9297;display:grid;gap:2px;justify-items:center;min-width:49px}.bottom-link span{font-size:22px;line-height:1}.bottom-link small{font-size:9px}.bottom-link.selected{color:#b65361}.bottom-add{border:0;border-radius:14px;width:47px;height:42px;background:#b65361;color:#fff;font-size:27px;box-shadow:0 6px 17px #b6536140}.footer-note{padding:15px 15px 105px}.toast{bottom:87px;right:13px;left:13px}.field-grid{grid-template-columns:1fr 1fr}.dialog{border-radius:19px;padding:22px 17px;max-height:calc(100dvh - 30px)}.dialog-actions{flex-wrap:wrap}}
+@media(max-width:380px){.summary-card{padding:13px 9px}.stat-number{font-size:23px}.person-info{max-width:143px}.person-card{flex-wrap:wrap}.person-actions{margin-left:auto}.person-card .status-pill{margin-left:auto}.field-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){.btn,.person-card,.action-round{transition:background .15s ease,transform .15s ease}.btn:active,.action-round:active{transform:scale(.97)}}
+
+</style>
+  
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Menu główne">
+      <div class="brand"><div class="brand-icon" aria-hidden="true">♥</div><div><strong>pamiętam<span class="brand-dot">.</span></strong><small>ważne relacje, zawsze blisko</small></div></div>
+      <div class="sidebar-label">TWOJA PRZESTRZEŃ</div>
+      <nav class="desktop-nav" id="desktop-nav">
+        <button class="nav-link selected" data-nav="today"><span class="nav-icon">⌂</span><span>Na dziś</span><span id="nav-count" class="nav-count hidden">0</span></button>
+        <button class="nav-link" data-nav="people"><span class="nav-icon">♡</span><span>Moi bliscy</span></button>
+        <button class="nav-link" data-nav="calendar"><span class="nav-icon">▦</span><span>Kalendarz</span></button>
+        <button class="nav-link" data-nav="settings"><span class="nav-icon">⚙</span><span>Ustawienia</span></button>
+      </nav>
+      <div class="side-note"><span class="side-note-icon">✦</span><strong>Małe gesty mają znaczenie.</strong><p>Jedna rozmowa potrafi zmienić cały dzień.</p></div>
+      <div class="sidebar-foot">Dane tylko na Twoim urządzeniu <span aria-hidden="true">◉</span></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div class="mobile-brand"><span class="mobile-brand-icon">♥</span><strong>pamiętam<span class="brand-dot">.</span></strong></div><span class="privacy-pill"><span class="privacy-pip"></span> Prywatne i lokalne</span><button id="top-add" class="btn btn-primary btn-top" type="button">＋ Dodaj osobę</button></header>
+      <main id="app-main" tabindex="-1"></main>
+      <footer class="footer-note">Pamiętam · Każdy kontakt ma znaczenie.</footer>
+    </div>
+  </div>
+  <nav class="bottom-nav" aria-label="Menu mobilne">
+    <button class="bottom-link selected" data-nav="today"><span>⌂</span><small>Na dziś</small></button>
+    <button class="bottom-link" data-nav="people"><span>♡</span><small>Bliscy</small></button>
+    <button class="bottom-add" id="bottom-add" type="button" aria-label="Dodaj osobę">＋</button>
+    <button class="bottom-link" data-nav="calendar"><span>▦</span><small>Daty</small></button>
+    <button class="bottom-link" data-nav="settings"><span>⚙</span><small>Więcej</small></button>
+  </nav>
+  <div id="overlay" class="overlay hidden" aria-hidden="true"><div id="dialog" class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"></div></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <input id="vcf-input" type="file" accept=".vcf,text/vcard,text/x-vcard" hidden />
+  <input id="backup-input" type="file" accept=".json,application/json" hidden />
+<script>
+/* Pamiętam 1.0 – lokalny organizer relacji. Bez serwera i zewnętrznych bibliotek. */
+(() => {
+  'use strict';
+  const STORE = 'pamietam_v1';
+  const LEGACY_STORE = 'bliscy_v1'; // zgodność ze starszą wersją, gdy działała na tej samej domenie
+  const RELATIONS = ['Rodzina','Przyjaciel','Znajomy','Inna relacja'];
+  const DAYS = [3,7,14,30,60,90];
+  const main = document.getElementById('app-main');
+  const overlay = document.getElementById('overlay');
+  const dialog = document.getElementById('dialog');
+  const toastBox = document.getElementById('toast');
+  const vcfInput = document.getElementById('vcf-input');
+  const backupInput = document.getElementById('backup-input');
+  let currentView = 'today';
+  let searchText = '';
+  let currentFilter = 'all';
+  let toastTimer;
+  let lastModalFocus = null;
+  let undoAction = null;
+  let importCandidates = [];
+  let pendingInstall = null;
+
+  function id() { return (globalThis.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'b-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2); }
+  function localDate(date = new Date()) { const y=date.getFullYear(),m=String(date.getMonth()+1).padStart(2,'0'),d=String(date.getDate()).padStart(2,'0'); return `${y}-${m}-${d}`; }
+  function parseDate(s) { if(!/^\d{4}-\d\d-\d\d$/.test(s||'')) return null; const [y,m,d]=s.split('-').map(Number); const date=new Date(y,m-1,d,12); return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d ? date:null; }
+  function addDays(s,n) { const d=parseDate(s)||new Date();d.setDate(d.getDate()+n);return localDate(d); }
+  function dayDiff(dateStr) { const a=parseDate(localDate()), b=parseDate(dateStr);return b?Math.round((b-a)/86400000):0; }
+  function formatDate(s, opts={day:'numeric',month:'long'}) {const d=parseDate(s);return d?new Intl.DateTimeFormat('pl-PL',opts).format(d):'—';}
+  function escapeHTML(s) { return String(s??'').replace(/[&<>"']/g, x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x])); }
+  function clampStr(v,max=250) { return String(v||'').trim().slice(0,max); }
+  function safePhone(s) {return clampStr(s,40).replace(/[^0-9+()\-\s]/g,'');}
+  function normalizedPhone(s) {let v=String(s||'').replace(/\D/g,'');if(v.length===9)v='48'+v;return v;}
+  function initials(s) {return String(s||'?').split(/\s+/).slice(0,2).map(x=>x[0]||'').join('').toLocaleUpperCase('pl-PL')||'?';}
+  function freshState() {return {version:1,people:[],history:[]};}
+  function sanitizePerson(input) {
+    const obj=input&&typeof input==='object'?input:{};
+    const name=clampStr(obj.name,110);
+    if(!name) return null;
+    const freq=Number(obj.frequency);
+    return {id:clampStr(obj.id,85)||id(),name,relation:RELATIONS.includes(obj.relation)?obj.relation:'Inna relacja',phone:safePhone(obj.phone),frequency:Number.isInteger(freq)&&freq>=1&&freq<=365?freq:14,lastContact:parseDate(obj.lastContact)?obj.lastContact:'',birthday:parseDate(obj.birthday)?obj.birthday:'',note:clampStr(obj.note,600),createdAt:parseDate(obj.createdAt)?obj.createdAt:localDate()};
+  }
+  function sanitizeHistory(input) { if(!input||typeof input!=='object')return null;return {id:clampStr(input.id,90)||id(),personId:clampStr(input.personId,90),date:parseDate(input.date)?input.date:localDate()}; }
+  function sanitizedState(input) {
+    if(!input||!Array.isArray(input.people)||input.people.length>5000)throw Error('Nieprawidłowy plik danych.');
+    const seen=new Set();const people=input.people.map(sanitizePerson).filter(p=>{if(!p||seen.has(p.id))return false;seen.add(p.id);return true;});
+    const history=(Array.isArray(input.history)?input.history:[]).slice(-20000).map(sanitizeHistory).filter(h=>h&&seen.has(h.personId));
+    return {version:1,people,history};
+  }
+  function load() {
+    try {
+      const current = localStorage.getItem(STORE);
+      if (current !== null) return sanitizedState(JSON.parse(current));
+      // Migracja tylko przy aktualizacji pod tym samym adresem domenowym.
+      const legacy = localStorage.getItem(LEGACY_STORE);
+      if (legacy !== null) {
+        const migrated = sanitizedState(JSON.parse(legacy));
+        localStorage.setItem(STORE, JSON.stringify(migrated));
+        return migrated;
+      }
+      return freshState();
+    } catch (e) {
+      console.error('Problem z odczytem danych:', e);
+      return freshState();
+    }
+  }
+  let db=load();
+  function persist() {try{localStorage.setItem(STORE,JSON.stringify(db));return true;}catch(e){toast('Nie udało się zapisać. Sprawdź miejsce i ustawienia przeglądarki.');return false;}}
+  function notify(msg,undo=null) {
+    clearTimeout(toastTimer);undoAction=undo;toastBox.replaceChildren();
+    const text=document.createElement('span');text.textContent=msg;toastBox.append(text);
+    if(undo){const btn=document.createElement('button');btn.textContent='Cofnij';btn.type='button';btn.addEventListener('click',()=>{const act=undoAction;undoAction=null;if(act)act();hideToast();});toastBox.append(btn);}
+    toastBox.classList.remove('hidden');toastTimer=setTimeout(hideToast,4300);
+  }
+  function hideToast(){toastBox.classList.add('hidden');undoAction=null;}
+  const toast=notify;
+  function nextDue(p){return addDays(p.lastContact||p.createdAt,p.frequency);}
+  function dueDays(p){return dayDiff(nextDue(p));}
+  function status(p){const d=dueDays(p);return d<0?{cls:'',text:`${Math.abs(d)} dn. po terminie`}:d===0?{cls:'',text:'Dzisiaj'}:d<=3?{cls:'neutral',text:`Za ${d} ${d===1?'dzień':'dni'}`}:{cls:'good',text:`Za ${d} dni`};}
+  function nextBirthday(p){if(!p.birthday)return null;const orig=parseDate(p.birthday);const today=parseDate(localDate());if(!orig||!today)return null;let y=today.getFullYear();let d=new Date(y,orig.getMonth(),orig.getDate(),12);if(orig.getMonth()===1&&orig.getDate()===29&&d.getMonth()!==1)d=new Date(y,2,1,12);if(d<today){y++;d=new Date(y,orig.getMonth(),orig.getDate(),12);if(orig.getMonth()===1&&orig.getDate()===29&&d.getMonth()!==1)d=new Date(y,2,1,12);}return localDate(d);}
+  function sortedPeople(){return [...db.people].sort((a,b)=>dueDays(a)-dueDays(b)||a.name.localeCompare(b.name,'pl'));}
+  function setView(v) {if(!['today','people','calendar','settings'].includes(v))return;currentView=v;searchText='';currentFilter='all';closeDialog();render();window.scrollTo({top:0,behavior:'auto'});}
+  function render(){
+    document.querySelectorAll('[data-nav]').forEach(b=>{b.classList.toggle('selected',b.dataset.nav===currentView);if(b.dataset.nav===currentView)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+    const urgent=db.people.filter(p=>dueDays(p)<=0).length;
+    const navCount=document.getElementById('nav-count');navCount.textContent=urgent;navCount.classList.toggle('hidden',!urgent);
+    const views={today:todayView,people:peopleView,calendar:calendarView,settings:settingsView};views[currentView]();
+  }
+  function personCard(p, options={}){
+    const s=status(p), days=dueDays(p);
+    const last=p.lastContact?'Ostatni kontakt: '+formatDate(p.lastContact):'Nie zapisano ostatniej rozmowy';
+    return `<article class="person-card">
+      <div class="person-avatar alt${db.people.indexOf(p)%4}">${escapeHTML(initials(p.name))}</div>
+      <div class="person-info"><h3 class="person-name">${escapeHTML(p.name)}</h3><div class="person-meta"><span>${escapeHTML(p.relation)}</span><span class="dot"></span><span>${escapeHTML(last)}</span></div></div>
+      <span class="status-pill ${s.cls}">${escapeHTML(s.text)}</span>
+      <div class="person-actions"><button class="action-round" type="button" data-action="details" data-id="${escapeHTML(p.id)}" aria-label="Szczegóły: ${escapeHTML(p.name)}" title="Szczegóły">⋯</button>${!options.noDone?`<button class="action-round primary" type="button" data-action="done" data-id="${escapeHTML(p.id)}" aria-label="Oznacz kontakt z ${escapeHTML(p.name)}" title="Rozmawiałem dzisiaj">✓</button>`:''}</div>
+    </article>`;
+  }
+  function emptyBlock(head, desc, button='Dodaj bliską osobę') {return `<section class="empty"><div class="empty-emoji">♡</div><h3>${head}</h3><p>${desc}</p>${button?`<button class="btn btn-primary" type="button" data-action="add">＋ ${button}</button>`:''}</section>`;}
+  function todayView(){
+    const today=localDate(), urgent=sortedPeople().filter(p=>dueDays(p)<=0),upcoming=sortedPeople().filter(p=>dueDays(p)>0&&dueDays(p)<=7), birthdays=db.people.map(p=>({p,date:nextBirthday(p)})).filter(x=>x.date&&dayDiff(x.date)<=14).sort((a,b)=>a.date.localeCompare(b.date));
+    main.innerHTML=`<div class="header-row"><div><p class="eyebrow">TWOJE RELACJE</p><h1 class="title">Dobrze, że jesteś ♡</h1><p class="subtitle">${new Intl.DateTimeFormat('pl-PL',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(parseDate(today))}. Zadbaj dziś o to, co ważne.</p></div></div>
+    <section class="summary-grid"><article class="summary-card"><div class="stat-title">Moi bliscy <span class="stat-icon">♡</span></div><div class="stat-number">${db.people.length}</div><div class="stat-desc">osób w Twoim kręgu</div></article><article class="summary-card"><div class="stat-title">Czekają na kontakt <span class="stat-icon">♧</span></div><div class="stat-number accent">${urgent.length}</div><div class="stat-desc">przypomnienia na dziś</div></article><article class="summary-card"><div class="stat-title">W ciągu 7 dni <span class="stat-icon">▦</span></div><div class="stat-number green">${upcoming.length}</div><div class="stat-desc">nadchodzące kontakty</div></article></section>
+    <div class="section-title-row"><h2 class="section-title">Warto się odezwać</h2><span class="section-tag">${urgent.length} ${urgent.length===1?'osoba':'osób'}</span></div>
+    <div class="people-list">${urgent.length?urgent.map(p=>personCard(p)).join(''):db.people.length?emptyBlock('Wszystko aktualne!','Na dziś nie masz zaległych kontaktów. Miło to widzieć.',null):emptyBlock('Zacznij od najważniejszych osób','Dodaj pierwszą osobę, ustal częstotliwość kontaktu i pozwól aplikacji pilnować kolejnych dat.')}</div>
+    ${upcoming.length?`<div class="section-title-row"><h2 class="section-title">W najbliższych dniach</h2><span class="section-hint">Kolejne 7 dni</span></div><div class="people-list">${upcoming.slice(0,5).map(p=>personCard(p,{noDone:true})).join('')}</div>`:''}
+    ${birthdays.length?`<div class="section-title-row"><h2 class="section-title">Zbliżające się urodziny 🎂</h2><button class="btn-text" data-nav="calendar">Wszystkie daty</button></div><div class="soon-list">${birthdays.slice(0,3).map(b=>birthdayRow(b.p,b.date)).join('')}</div>`:''}
+    <div class="tips-row"><article class="tip-box"><h3>✦ Mały gest, wielka różnica</h3><p>Nie potrzebujesz specjalnej okazji. Czasem wystarczy krótkie „Co u Ciebie?” — i kilka minut prawdziwej rozmowy.</p></article><article class="tip-box alternate"><h3>⌁ Twoje dane są Twoje</h3><p>Nie wysyłamy kontaktów do żadnej chmury. Pamiętaj tylko o utworzeniu kopii zapasowej w Ustawieniach.</p></article></div>`;
+  }
+  function peopleView(){
+    const filtered=sortedPeople().filter(p=>(currentFilter==='all'||p.relation===currentFilter)&&[p.name,p.relation,p.phone,p.note].join(' ').toLocaleLowerCase('pl').includes(searchText.toLocaleLowerCase('pl')));
+    main.innerHTML=`<div class="header-row"><div><p class="eyebrow">TWOJE RELACJE</p><h1 class="title">Moi bliscy</h1><p class="subtitle">Wszystkie ważne osoby w jednym spokojnym miejscu.</p></div></div><div class="tool-row"><div class="search-wrap"><input id="people-search" aria-label="Szukaj osoby" placeholder="Szukaj po imieniu lub relacji..." value="${escapeHTML(searchText)}" /></div><select class="select" id="people-filter" aria-label="Filtruj relacje"><option value="all">Wszystkie relacje</option>${RELATIONS.map(r=>`<option value="${escapeHTML(r)}" ${currentFilter===r?'selected':''}>${escapeHTML(r)}</option>`).join('')}</select></div><div class="section-title-row"><h2 class="section-title">Twoje osoby <span style="color:#b89ea4;font-weight:400">(${filtered.length})</span></h2><div class="header-actions"><button class="btn btn-secondary btn-small" data-action="import-vcf">↥ Import VCF</button><button class="btn btn-primary btn-small" data-action="add">＋ Dodaj</button></div></div><div class="people-list" id="people-results">${filtered.length?filtered.map(p=>personCard(p)).join(''):emptyBlock('Nie ma tu jeszcze osób',db.people.length?'Spróbuj zmienić wyszukiwanie lub filtr.':'Dodaj pierwszą osobę ręcznie lub wybierz ją z kontaktów telefonu.')}</div>`;
+  }
+  function birthdayRow(p,date){const d=parseDate(date);return `<div class="birthday-row"><div class="birthday-date">${d.getDate()}<small>${new Intl.DateTimeFormat('pl-PL',{month:'short'}).format(d).toLocaleUpperCase('pl')}</small></div><div class="birthday-name">${escapeHTML(p.name)}<span class="birthday-caption">${dayDiff(date)===0?'Dzisiaj!':`Za ${dayDiff(date)} dni`} · ${escapeHTML(p.relation)}</span></div><button class="btn btn-secondary btn-small" data-action="details" data-id="${escapeHTML(p.id)}">Zobacz</button></div>`;}
+  function calendarView(){const upcoming=sortedPeople().filter(p=>dueDays(p)>=0).slice(0,30);const birthdays=db.people.map(p=>({p,date:nextBirthday(p)})).filter(x=>x.date).sort((a,b)=>a.date.localeCompare(b.date));
+    main.innerHTML=`<div class="header-row"><div><p class="eyebrow">WAŻNE CHWILE</p><h1 class="title">Kalendarz</h1><p class="subtitle">Terminy kolejnych rozmów oraz urodziny Twoich bliskich.</p></div></div><div class="section-title-row"><h2 class="section-title">Najbliższe urodziny</h2></div><div class="soon-list">${birthdays.length?birthdays.map(b=>birthdayRow(b.p,b.date)).join(''):`<div class="section-empty">Nie dodano jeszcze żadnych dat urodzin. Uzupełnij je w profilu osoby.</div>`}</div><div class="section-title-row"><h2 class="section-title">Zaplanowane kontakty</h2></div><div class="people-list">${upcoming.length?upcoming.map(p=>personCard(p,{noDone:true})).join(''):`<div class="section-empty">Dodaj osoby i częstotliwość kontaktu, aby zobaczyć nadchodzące terminy.</div>`}</div>`;
+  }
+  function settingsView(){const canInstall=!!pendingInstall;
+    main.innerHTML=`<div class="header-row"><div><p class="eyebrow">PO TWOJEMU</p><h1 class="title">Ustawienia</h1><p class="subtitle">Zabezpiecz dane, przenieś je na inne urządzenie i skonfiguruj aplikację.</p></div></div><div class="settings-stack"><article class="settings-card"><h3>⇩ Kopia zapasowa</h3><p>Wszystkie osoby, daty i historia rozmów zapisują się wyłącznie w tej przeglądarce. Pobierz kopię JSON, aby nie utracić ich po zmianie telefonu lub wyczyszczeniu pamięci przeglądarki.</p><div class="settings-buttons"><button class="btn btn-primary" data-action="export">↓ Pobierz kopię danych</button><button class="btn btn-secondary" data-action="import-backup">↑ Przywróć kopię</button></div></article>
+    <article class="settings-card"><h3>♧ Import kontaktów</h3><p>Dodaj osoby z pliku VCF albo wybierz kontakt bezpośrednio z telefonu, jeżeli Twoja przeglądarka obsługuje tę funkcję. Nic nie jest wysyłane do internetu.</p><div class="settings-buttons"><button class="btn btn-secondary" data-action="import-vcf">Importuj VCF</button><button class="btn btn-secondary" data-action="pick-contact">Wybierz z telefonu</button></div></article>
+    <article class="settings-card"><h3>♧ Instalacja na ekranie telefonu</h3><p>Pamiętam działa jako PWA. Możesz dodać ikonę do ekranu głównego i korzystać z zapisanych kontaktów również bez internetu.</p>${canInstall?`<button class="btn btn-primary" data-action="install">Zainstaluj aplikację</button>`:`<div class="hint">Android / Chrome: menu ⋮ → Dodaj do ekranu głównego. iPhone / Safari: Udostępnij → Dodaj do ekranu początkowego.</div>`}</article>
+    <article class="settings-card"><h3>◷ Przypomnienia i powiadomienia</h3><p>Po otwarciu aplikacji wyświetlamy zaległe oraz nadchodzące kontakty. W tej wersji nie ma automatycznych powiadomień działających przy zamkniętej aplikacji. Takie powiadomienia wymagają później usługi push i jej konfiguracji.</p><div class="notice">Nie traktuj tej wersji jako niezawodnego alarmu w tle. Aby sprawdzić terminy, otwórz aplikację „Pamiętam”.</div></article>
+    <article class="settings-card attention"><h3>⚠ Zarządzanie pamięcią</h3><p>Możesz usunąć wszystkie zapisane dane. Ta operacja jest nieodwracalna, chyba że masz wcześniej pobraną kopię zapasową.</p><button class="btn btn-danger" data-action="clear-all">Usuń wszystkie dane</button></article><span class="app-version">Pamiętam 1.0 · Prywatna wersja testowa · Bez konta i chmury</span></div>`;
+  }
+  function openDialog(content){lastModalFocus=document.activeElement;dialog.innerHTML=content;overlay.classList.remove('hidden');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>{const f=dialog.querySelector('input:not([type="hidden"]),button');f?.focus();},0);}
+  function closeDialog(){overlay.classList.add('hidden');overlay.setAttribute('aria-hidden','true');dialog.innerHTML='';document.body.style.overflow='';if(lastModalFocus?.isConnected)lastModalFocus.focus();lastModalFocus=null;}
+  function dialogHeader(title,descr=''){return `<div class="dialog-header"><div><p class="eyebrow">PAMIĘTAM</p><h2 id="dialog-title">${escapeHTML(title)}</h2>${descr?`<p>${escapeHTML(descr)}</p>`:''}</div><button class="close" data-action="close" aria-label="Zamknij okno" type="button">×</button></div>`;}
+  function field(label,id,value='',type='text',more=''){return `<div class="field"><label for="${id}">${label}</label><input id="${id}" name="${id}" type="${type}" value="${escapeHTML(value)}" ${more}/></div>`;}
+  function openForm(existing=null, defaultData=null){
+    const p=existing||defaultData||{};
+    const isEdit=!!existing;
+    const freq=p.frequency||14;const other=!DAYS.includes(freq);
+    const form=`${dialogHeader(isEdit?'Edytuj osobę':'Dodaj bliską osobę',isEdit?'Zmień dane lub częstotliwość kontaktu.':'Wybierz najważniejsze osoby, o których chcesz pamiętać.')}
+      ${!isEdit?`<div class="quick-links"><button class="btn btn-secondary btn-small" data-action="pick-contact">☏ Wybierz z telefonu</button><button class="btn btn-secondary btn-small" data-action="import-vcf">↥ Import z pliku VCF</button></div><div class="divider-text">LUB UZUPEŁNIJ RĘCZNIE</div>`:''}
+      <form id="person-form" data-edit="${isEdit?escapeHTML(p.id):''}">
+      ${field('Imię i nazwisko *','name',p.name||'','text','required maxlength="110" autocomplete="off"')}
+      <div class="field-grid"><div class="field"><label for="relation">Relacja</label><select id="relation" name="relation">${RELATIONS.map(r=>`<option ${r===p.relation?'selected':''} value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label for="frequency">Jak często przypominać?</label><select id="frequency" name="frequency">${DAYS.map(n=>`<option value="${n}" ${n==freq?'selected':''}>Co ${n} dni</option>`).join('')}<option value="custom" ${other?'selected':''}>Własny okres...</option></select></div></div>
+      <div id="custom-period" class="field ${other?'':'hidden'}">${field('Własna liczba dni (1–365)','custom-days',other?freq:14,'number','min="1" max="365"')}</div>
+      ${field('Numer telefonu <span class="optional">(opcjonalnie)</span>','phone',p.phone||'','tel','maxlength="40" autocomplete="off"')}
+      <div class="field-grid">${field('Ostatni kontakt <span class="optional">(jeśli pamiętasz)</span>','lastContact',p.lastContact||'','date')}${field('Urodziny <span class="optional">(opcjonalnie)</span>','birthday',p.birthday||'','date')}</div>
+      <div class="field"><label for="note">Notatka <span class="optional">(opcjonalnie)</span></label><textarea name="note" id="note" maxlength="600" placeholder="O czym warto pamiętać podczas rozmowy?">${escapeHTML(p.note||'')}</textarea><small>Jeśli nie podasz daty ostatniego kontaktu, przypomnienie pojawi się po wybranym okresie od dodania osoby.</small></div>
+      <div class="dialog-actions"><div>${isEdit?`<button type="button" class="btn btn-danger btn-small" data-action="delete" data-id="${escapeHTML(p.id)}">Usuń osobę</button>`:''}</div><div class="right"><button type="button" class="btn btn-secondary" data-action="close">Anuluj</button><button type="submit" class="btn btn-primary">${isEdit?'Zapisz zmiany':'Dodaj osobę'}</button></div></div></form>`;
+    openDialog(form);
+  }
+  function savePersonFromForm(form){
+    const eId=form.dataset.edit;
+    const old=eId?db.people.find(p=>p.id===eId):null;
+    const rawFreq=form.elements.frequency.value==='custom'?Number(form.elements['custom-days'].value):Number(form.elements.frequency.value);
+    if(!Number.isInteger(rawFreq)||rawFreq<1||rawFreq>365){toast('Wybierz okres od 1 do 365 dni.');return;}
+    const name=clampStr(form.elements.name.value,110);if(!name){toast('Wprowadź imię osoby.');return;}
+    for(const k of ['lastContact','birthday']){const v=form.elements[k].value;if(v&&!parseDate(v)){toast('Sprawdź wpisane daty.');return;}}
+    const person=sanitizePerson({id:old?.id||id(),name,relation:form.elements.relation.value,phone:form.elements.phone.value,frequency:rawFreq,lastContact:form.elements.lastContact.value,birthday:form.elements.birthday.value,note:form.elements.note.value,createdAt:old?.createdAt||localDate()});
+    if(old){db.people=db.people.map(p=>p.id===old.id?person:p);}else{db.people.push(person);}
+    persist();closeDialog();render();toast(old?'Zapisano zmiany.':'Dodano bliską osobę ♡');
+  }
+  function showDetails(personId){const p=db.people.find(x=>x.id===personId);if(!p)return;const s=status(p);const recent=db.history.filter(h=>h.personId===p.id).slice(-8).reverse();const digits=normalizedPhone(p.phone);
+    const contactBtns=digits?`<a class="btn btn-secondary btn-small" href="tel:${digits}">☏ Zadzwoń</a><a class="btn btn-secondary btn-small" href="https://wa.me/${digits}" target="_blank" rel="noopener noreferrer">✉ WhatsApp</a><a class="btn btn-secondary btn-small" href="sms:${digits}">☷ SMS</a>`:`<span class="hint">Dodaj numer telefonu, aby korzystać z szybkich przycisków.</span>`;
+    openDialog(`${dialogHeader(p.name,`${p.relation} · kontakt co ${p.frequency} dni`)}<div class="contact-banner">Następny kontakt: <strong>${formatDate(nextDue(p),{day:'numeric',month:'long',year:'numeric'})}</strong> — ${escapeHTML(s.text)}</div><div class="call-row">${contactBtns}</div><button class="btn btn-primary" type="button" data-action="done" data-id="${escapeHTML(p.id)}">✓ Rozmawiałem dzisiaj</button><button class="btn btn-ghost" type="button" data-action="message" data-id="${escapeHTML(p.id)}" style="margin-left:6px">✦ Pomysł na wiadomość</button><div class="section-title-row"><h3 class="section-title">Informacje</h3><button class="btn-text" type="button" data-action="edit" data-id="${escapeHTML(p.id)}">Edytuj</button></div><div class="mini-row"><strong>Ostatni kontakt</strong><small>${p.lastContact?formatDate(p.lastContact):'Brak zapisu'}</small></div><div class="mini-row"><strong>Urodziny</strong><small>${p.birthday?formatDate(p.birthday):'Nie podano'}</small></div>${p.note?`<p class="hint">${escapeHTML(p.note)}</p>`:''}<div class="section-title-row"><h3 class="section-title">Historia rozmów</h3></div>${recent.length?`<ul class="history-list">${recent.map(h=>`<li>${escapeHTML(formatDate(h.date,{day:'numeric',month:'long',year:'numeric'}))}</li>`).join('')}</ul>`:'<p class="hint">Nie dodano jeszcze żadnych rozmów.</p>'}`);
+  }
+  function messageModal(personId){const p=db.people.find(x=>x.id===personId);if(!p)return;const msgs=[`Cześć ${p.name.split(' ')[0]}! Co u Ciebie słychać? Dawno nie rozmawialiśmy.`,`Hej! Przyszło mi dziś do głowy, żeby się odezwać. Jak Ci mija tydzień?`,`Cześć! Masz w najbliższych dniach chwilę na rozmowę?`];
+    openDialog(`${dialogHeader('Wiadomość do bliskiej osoby','Wybierz propozycję. Wysłanie wiadomości zawsze zależy od Ciebie.')}${msgs.map((m,i)=>`<div class="mini-row"><span style="font-size:12px;line-height:1.6;max-width:75%">${escapeHTML(m)}</span><button class="btn btn-secondary btn-small" type="button" data-action="copy-message" data-msg="${i}" data-id="${escapeHTML(personId)}">Kopiuj</button></div>`).join('')}<div class="hint" style="margin-top:12px">Nie wysyłamy żadnych wiadomości automatycznie.</div>`);
+  }
+  async function copyMessage(pId,i){const p=db.people.find(x=>x.id===pId);if(!p)return;const msgs=[`Cześć ${p.name.split(' ')[0]}! Co u Ciebie słychać? Dawno nie rozmawialiśmy.`,`Hej! Przyszło mi dziś do głowy, żeby się odezwać. Jak Ci mija tydzień?`,`Cześć! Masz w najbliższych dniach chwilę na rozmowę?`];const msg=msgs[i];if(!msg)return;try{await navigator.clipboard.writeText(msg);toast('Skopiowano wiadomość.');}catch{toast('Nie udało się skopiować wiadomości.');}}
+  function markContact(pId){const p=db.people.find(x=>x.id===pId);if(!p)return;const previous=p.lastContact, today=localDate();const ev={id:id(),personId:pId,date:today};p.lastContact=today;db.history.push(ev);persist();closeDialog();render();toast(`Zapisano kontakt: ${p.name}.`,()=>{p.lastContact=previous;db.history=db.history.filter(h=>h.id!==ev.id);persist();render();});}
+  function deletePerson(pId){const p=db.people.find(x=>x.id===pId);if(!p)return;if(!confirm(`Usunąć osobę „${p.name}” i historię jej rozmów?`))return;db.people=db.people.filter(x=>x.id!==pId);db.history=db.history.filter(x=>x.personId!==pId);persist();closeDialog();render();toast('Usunięto osobę.');}
+  function exportBackup(){const data={app:'Pamiętam',exportedAt:new Date().toISOString(),...db};downloadBlob(JSON.stringify(data,null,2),`pamietam-kopia-${localDate()}.json`,'application/json;charset=utf-8');toast('Kopia zapasowa została pobrana.');}
+  function downloadBlob(content,name,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+  function importBackupFile(file){if(!file)return;if(file.size>8*1024*1024){toast('Plik kopii jest zbyt duży.');return;}const reader=new FileReader();reader.onload=()=>{try{const raw=JSON.parse(String(reader.result));if(!['Pamiętam','Bliscy'].includes(raw.app)||raw.version!==1)throw Error('Nieprawidłowa kopia aplikacji Pamiętam / Bliscy 1.0.');const next=sanitizedState(raw);if(!confirm(`Ta operacja ZASTĄPI aktualne dane (${db.people.length} osób) danymi z kopii (${next.people.length} osób). Kontynuować?`))return;db=next;persist();setView('today');toast('Przywrócono kopię zapasową.');}catch(e){toast('Błąd kopii: '+String(e.message).slice(0,90));}};reader.onerror=()=>toast('Nie udało się odczytać pliku.');reader.readAsText(file,'utf-8');}
+  function getVCards(text){
+    const unfolded=text.replace(/\r\n/g,'\n').replace(/\r/g,'\n').replace(/\n[ \t]/g,'');
+    const blocks=[...unfolded.matchAll(/BEGIN:VCARD\s*\n([\s\S]*?)END:VCARD/gi)].slice(0,1500);
+    const decode=(value)=>value.replace(/\\n/gi,' ').replace(/\\([,;\\])/g,'$1').trim();
+    const records=[];
+    for(const block of blocks){const lines=block[1].split('\n');let name='',given='',family='',phone='';
+      for(const line of lines){const idx=line.indexOf(':');if(idx<0)continue;const property=line.slice(0,idx).split(';')[0].toUpperCase().split('.').pop();let val=line.slice(idx+1).trim();
+        if(property==='FN'&&!name)name=decode(val);
+        else if(property==='N'&&(!given||!family)){const parts=val.split(';');family=decode(parts[0]||'');given=decode(parts[1]||'');}
+        else if(property==='TEL'&&!phone)phone=safePhone(decode(val.replace(/^tel:/i,'')));
+      }
+      name=name||[given,family].filter(Boolean).join(' ');
+      if(name)records.push({name:clampStr(name,110),phone});
+    }
+    const seen=new Set();return records.filter(r=>{const key=r.name.toLowerCase()+'|'+normalizedPhone(r.phone);if(seen.has(key))return false;seen.add(key);return true;});
+  }
+  function vcfFile(file){if(!file)return;if(file.size>4*1024*1024){toast('Plik VCF przekracza limit 4 MB.');return;}const reader=new FileReader();reader.onload=()=>{const cards=getVCards(String(reader.result||''));if(!cards.length){toast('Nie znaleziono kontaktów w pliku VCF.');return;}importCandidates=cards;showImportModal();};reader.onerror=()=>toast('Nie udało się odczytać pliku VCF.');reader.readAsText(file,'utf-8');}
+  function showImportModal(){const count=importCandidates.length;openDialog(`${dialogHeader('Wybierz kontakty','Import VCF — zaznacz tylko osoby, które chcesz dodać.')}<p class="import-summary">Znaleziono <strong>${count}</strong> ${count===1?'kontakt':'kontaktów'}. Domyślnie nic nie jest wybrane. Możesz też ustalić wspólną częstotliwość przypomnień.</p><div class="field-grid"><div class="field"><label for="import-relation">Relacja</label><select id="import-relation">${RELATIONS.map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label for="import-freq">Częstotliwość</label><select id="import-freq">${DAYS.map(d=>`<option value="${d}" ${d===14?'selected':''}>Co ${d} dni</option>`).join('')}</select></div></div><div class="settings-buttons"><button class="btn btn-secondary btn-small" data-action="import-select-all">Zaznacz wszystkie</button><button class="btn btn-secondary btn-small" data-action="import-select-none">Odznacz wszystkie</button></div><div class="import-list">${importCandidates.map((p,i)=>`<label class="mini-row" style="cursor:pointer"><span><strong>${escapeHTML(p.name)}</strong><small>${escapeHTML(p.phone||'Bez numeru')}</small></span><input class="checkbox import-check" type="checkbox" value="${i}" /></label>`).join('')}</div><div class="dialog-actions"><span id="selected-count" class="hint">Zaznaczono: 0</span><div class="right"><button class="btn btn-secondary" data-action="close">Anuluj</button><button class="btn btn-primary" data-action="confirm-import">Dodaj wybrane</button></div></div>`);}
+  function confirmVcfImport(){const boxes=[...dialog.querySelectorAll('.import-check:checked')];if(!boxes.length){toast('Najpierw wybierz przynajmniej jedną osobę.');return;}
+    const freq=Number(dialog.querySelector('#import-freq').value),relation=dialog.querySelector('#import-relation').value;
+    const existing=new Set(db.people.map(p=>p.name.toLocaleLowerCase('pl')+'|'+normalizedPhone(p.phone)));
+    let added=0, skipped=0;
+    for(const box of boxes){const candidate=importCandidates[Number(box.value)];if(!candidate)continue;const key=candidate.name.toLocaleLowerCase('pl')+'|'+normalizedPhone(candidate.phone);if(existing.has(key)){skipped++;continue;}const p=sanitizePerson({...candidate,frequency:freq,relation,createdAt:localDate()});if(p){db.people.push(p);existing.add(key);added++;}}
+    importCandidates=[];persist();closeDialog();currentView='people';render();toast(`Zaimportowano ${added} osób.${skipped?' Pominięto duplikaty: '+skipped+'.':''}`);
+  }
+  async function pickContact(){
+    if(!navigator.contacts?.select){toast('Wybór z książki telefonicznej jest niedostępny. Użyj importu VCF lub dodaj osobę ręcznie.');return;}
+    try{
+      // select() uruchamiamy bezpośrednio po kliknięciu: nie wolno utracić aktywacji użytkownika.
+      const result=await navigator.contacts.select(['name','tel'],{multiple:false});if(!result?.length)return;const contact=result[0];const name=Array.isArray(contact.name)?contact.name[0]:contact.name;const phone=Array.isArray(contact.tel)?contact.tel[0]:contact.tel;
+      openForm(null,{name:clampStr(name,110),phone:safePhone(phone),relation:'Rodzina',frequency:14});
+    }catch(e){if(e?.name!=='AbortError')toast('Nie udało się otworzyć kontaktów. Spróbuj importu VCF.');}
+  }
+  function removeAll(){if(!db.people.length){toast('Nie ma zapisanych danych.');return;}if(!confirm(`Na pewno usunąć wszystkie ${db.people.length} osób i historię rozmów? Najpierw pobierz kopię zapasową.`))return;if(!confirm('Ostatnie potwierdzenie: wszystkie dane zostaną bezpowrotnie usunięte.'))return;db=freshState();persist();setView('today');toast('Wszystkie dane usunięte.');}
+  async function installApp(){if(!pendingInstall){toast('Użyj opcji „Dodaj do ekranu głównego” w przeglądarce.');return;}const prompt=pendingInstall;pendingInstall=null;await prompt.prompt();render();}
+  document.addEventListener('click',e=>{
+    const nav=e.target.closest('[data-nav]');if(nav){setView(nav.dataset.nav);return;}
+    const a=e.target.closest('[data-action]');if(!a)return;
+    const v=a.dataset.action,id=a.dataset.id;
+    switch(v){case 'add':openForm();break;case 'close':closeDialog();break;case 'details':showDetails(id);break;case 'edit':{const p=db.people.find(p=>p.id===id);if(p)openForm(p);break;}case 'done':markContact(id);break;case 'delete':deletePerson(id);break;case 'message':messageModal(id);break;case 'copy-message':copyMessage(id,Number(a.dataset.msg));break;case 'pick-contact':pickContact();break;case 'import-vcf':vcfInput.click();break;case 'export':exportBackup();break;case 'import-backup':backupInput.click();break;case 'clear-all':removeAll();break;case 'install':installApp();break;case 'import-select-all':dialog.querySelectorAll('.import-check').forEach(b=>b.checked=true);updateSelection();break;case 'import-select-none':dialog.querySelectorAll('.import-check').forEach(b=>b.checked=false);updateSelection();break;case 'confirm-import':confirmVcfImport();break;}
+  });
+  function updateSelection(){const el=document.getElementById('selected-count');if(el)el.textContent=`Zaznaczono: ${dialog.querySelectorAll('.import-check:checked').length}`;}
+  document.addEventListener('change',e=>{if(e.target.id==='frequency'){document.getElementById('custom-period')?.classList.toggle('hidden',e.target.value!=='custom');}if(e.target.matches('.import-check'))updateSelection();if(e.target.id==='people-filter'){currentFilter=e.target.value;const cursorPos=document.activeElement?.id;render();if(cursorPos==='people-filter')document.getElementById('people-filter')?.focus();}});
+  document.addEventListener('input',e=>{if(e.target.id==='people-search'){searchText=e.target.value;const list=document.getElementById('people-results');if(!list)return;const result=sortedPeople().filter(p=>(currentFilter==='all'||p.relation===currentFilter)&&[p.name,p.relation,p.phone,p.note].join(' ').toLocaleLowerCase('pl').includes(searchText.toLocaleLowerCase('pl')));list.innerHTML=result.length?result.map(p=>personCard(p)).join(''):emptyBlock('Nie znaleziono osoby','Spróbuj innego imienia lub zmień filtr.',null);const header=main.querySelector('.section-title span');if(header)header.textContent=`(${result.length})`;}});
+  document.addEventListener('submit',e=>{if(e.target.id==='person-form'){e.preventDefault();savePersonFromForm(e.target);}});
+  document.getElementById('top-add').addEventListener('click',()=>openForm());
+  document.getElementById('bottom-add').addEventListener('click',()=>openForm());
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeDialog();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!overlay.classList.contains('hidden'))closeDialog();if(e.key==='Tab'&&!overlay.classList.contains('hidden')){const buttons=[...dialog.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href]')].filter(x=>x.getClientRects().length);if(!buttons.length)return;const first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}}});
+  vcfInput.addEventListener('change',()=>{const file=vcfInput.files?.[0];vcfInput.value='';vcfFile(file);});
+  backupInput.addEventListener('change',()=>{const file=backupInput.files?.[0];backupInput.value='';importBackupFile(file);});
+  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();pendingInstall=e;if(currentView==='settings')render();});
+  window.addEventListener('storage',e=>{if(e.key===STORE){db=load();render();}});
+  if('serviceWorker' in navigator && location.protocol!=='file:')window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(e=>console.warn('PWA:',e)));
+  render();
+})();
+
+</script>
+</body>
+</html>
