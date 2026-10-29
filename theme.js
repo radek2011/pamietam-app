@@ -1,0 +1,17 @@
+(() => {
+'use strict';
+const KEY='pamietam_appearance_v1';
+const valid=v=>v==='green'||v==='pink';
+let chosen=null;try{chosen=localStorage.getItem(KEY)}catch(e){}
+const main=document.getElementById('app-main');
+const welcome=document.createElement('section');
+welcome.className='appearance-welcome hidden';welcome.id='appearance-welcome';welcome.setAttribute('role','dialog');welcome.setAttribute('aria-modal','true');welcome.setAttribute('aria-labelledby','appearance-title');
+welcome.innerHTML=`<div class="appearance-inner"><div class="appearance-brand"><img src="./icon.svg" alt=""><span>pamiętam.</span></div><div class="appearance-kicker">TWOJA APLIKACJA</div><h1 id="appearance-title">Wybierz swój wygląd</h1><p class="appearance-subtitle">Jasna aplikacja z czytelnymi napisami. Wybierz kolor akcentów, który bardziej Ci odpowiada.</p><div class="appearance-cards"><button class="appearance-card green" type="button" data-pick-appearance="green"><span class="appearance-symbol">◉</span><strong>Profil mężczyzny</strong><small>Białe tło i eleganckie zielone detale</small></button><button class="appearance-card pink" type="button" data-pick-appearance="pink"><span class="appearance-symbol">♡</span><strong>Profil kobiety</strong><small>Białe tło i subtelne różowe detale</small></button></div><p class="appearance-note">To tylko wygląd aplikacji. Funkcje są takie same, a kolorystykę można zmienić w ustawieniach.</p></div>`;
+document.body.append(welcome);
+function sync(){document.querySelectorAll('[data-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.choice===chosen)));}
+function choose(mode){if(!valid(mode))return;chosen=mode;document.documentElement.dataset.theme=mode;try{localStorage.setItem(KEY,mode)}catch(e){}sync();}
+function settings(){const stack=main?.querySelector('.settings-stack');if(!stack||stack.querySelector('#appearance-choice-card'))return;const card=document.createElement('article');card.className='settings-card';card.id='appearance-choice-card';card.innerHTML=`<h3>◈ Wygląd aplikacji</h3><p>Kolorystyka nie zmienia Twoich kontaktów ani przypomnień.</p><div class="appearance-settings-grid"><button type="button" class="appearance-option" data-choice="green" data-change-appearance="green"><span class="option-dot"></span><span><strong>Profil mężczyzny</strong><small>Zielone akcenty</small></span></button><button type="button" class="appearance-option" data-choice="pink" data-change-appearance="pink"><span class="option-dot"></span><span><strong>Profil kobiety</strong><small>Różowe akcenty</small></span></button></div>`;stack.prepend(card);sync();}
+document.addEventListener('click',e=>{const pick=e.target.closest('[data-pick-appearance]');if(pick){choose(pick.dataset.pickAppearance);welcome.classList.add('hidden');document.body.classList.remove('appearance-choosing');return;}const change=e.target.closest('[data-change-appearance]');if(change)choose(change.dataset.changeAppearance);});
+if(main){new MutationObserver(settings).observe(main,{childList:true});settings();}
+if(valid(chosen)){document.documentElement.dataset.theme=chosen;}else{document.documentElement.dataset.theme='green';welcome.classList.remove('hidden');document.body.classList.add('appearance-choosing');welcome.querySelector('button')?.focus();}
+})();
